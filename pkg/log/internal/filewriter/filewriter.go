@@ -227,7 +227,7 @@ func (f *FileWriter) daemon() {
 	aggsbuf := &bytes.Buffer{}
 	tk := time.NewTicker(f.opt.RotateInterval)
 	// TODO: make it configrable
-	aggstk := time.NewTicker(10 * time.Millisecond)
+	aggstk := time.NewTicker(1000 * time.Millisecond)
 	var err error
 	for {
 		select {
